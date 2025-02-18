@@ -1,0 +1,53 @@
+{
+  "name": "fanos",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "Fanos is a lightweight JavaScript library for reliable data transmission via the Beacon API, with auto-retry, Fetch fallback, batching, and flexible triggers.",
+  "main": "dist/fanos.esm.js",
+  "module": "dist/fanos.esm.js",
+  "type": "module",
+  "scripts": {
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
+    "format": "prettier --write src/**/*.{js,ts}",
+    "build": "rollup -c",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "beacon-api",
+    "data-tracking",
+    "data-analytics",
+    "fetch-api",
+    "javascript-asynchronous",
+    "asynchronous-request",
+    "non-blocking-request"
+  ],
+  "devDependencies": {
+    "@eslint/js": "^9.20.0",
+    "@rollup/plugin-commonjs": "^28.0.2",
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^9.2.6",
+    "@semantic-release/npm": "^11.0.3",
+    "eslint": "^9.20.0",
+    "globals": "^15.14.0",
+    "prettier": "3.5.0",
+    "rollup": "^2.79.2",
+    "semantic-release": "^22.0.12"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "author": "A.S Nassiry",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nassiry/fanosjs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nassiry/fanosjs/issues"
+  },
+  "homepage": "https://github.com/nassiry/fanosjs#readme"
+}

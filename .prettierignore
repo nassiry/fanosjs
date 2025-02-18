@@ -1,0 +1,10 @@
+# Ignore artifacts:
+node_modules/
+CHANGELOG.md
+docs/
+examples/
+dist/
+eslint.config.mjs
+rollup.config.js
+package.json
+README.md
