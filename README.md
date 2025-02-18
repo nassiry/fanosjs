@@ -2,6 +2,7 @@
 
 # Fanos 🏮
 
+![Release](https://github.com/nassiry/fanosjs/actions/workflows/release.yml/badge.svg)
 ![npm version](https://img.shields.io/npm/v/fanos.svg)
 ![Total Downloads](https://img.shields.io/npm/dt/fanos.svg)
 ![License](https://img.shields.io/npm/l/fanos.svg)
