@@ -54,7 +54,7 @@ npm install fanos
 Include the library directly in your HTML:
 
 ```html
-<script src="path/to/fanos.js"></script>
+<script src="path/to/fanos.umd.min.js"></script>
 ```
 #### CDN
 
