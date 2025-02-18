@@ -1,5 +1,12 @@
+<div align="center">
+
 # Fanos 🏮
 
+![npm version](https://img.shields.io/npm/v/fanos.svg)
+![Total Downloads](https://img.shields.io/npm/dt/fanos.svg)
+![License](https://img.shields.io/npm/l/fanos.svg)
+
+</div>
 **Fanos** is a lightweight JavaScript `promise-based` library that simplifies sending asynchronous requests using the [Beacon API](https://w3c.github.io/beacon/). It ensures reliable, non-blocking transmission of data to a server, making it ideal for scenarios like analytics, logging, and tracking user interactions. However, it does **but not guaranteed if the browser is closed suddenly**.
 
 To improve reliability, **Fanos** includes an **optional fallback mechanism using `Fetch`** and supports **automatic retrying of failed requests**. This ensures that your data is transmitted reliably, even in challenging network conditions.
