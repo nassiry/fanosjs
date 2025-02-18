@@ -12,7 +12,6 @@ jobs:
       contents: write
       id-token: write
 
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -30,6 +29,21 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Debug NPM_TOKEN
+        run: echo "Checking if NPM_TOKEN is set" && [ -n "$NODE_AUTH_TOKEN" ] && echo "NPM_TOKEN is set" || echo "NPM_TOKEN is missing"
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Create .npmrc file
+        run: echo "//registry.npmjs.org/:_authToken=${NODE_AUTH_TOKEN}" > ~/.npmrc
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Test NPM Authentication
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm whoami
+
       - name: Build the package
         run: npm run build
 
@@ -37,4 +51,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          DEBUG: "semantic-release:*"
         run: npx semantic-release
