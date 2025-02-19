@@ -2,7 +2,7 @@ import {
   createPayload,
   debugLog,
   getPayloadSize,
-  normalizePayload,
+  normalizePayload
 } from './utils.js'
 
 import { randomUUID } from './randomUUID.js'
@@ -99,7 +99,12 @@ export class RequestHandler {
       return true
     } catch (error) {
       debugLog(this._config.debug, 'Fetch fallback failed:', error)
-      return false
+      if (error.name === 'TypeError') {
+        debugLog(this._config.debug, 'Network error detected.');
+      } else {
+        debugLog(this._config.debug, 'HTTP error detected.');
+      }
+      return false;
     }
   }
 }
