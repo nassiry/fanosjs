@@ -1,6 +1,6 @@
 {
   "name": "fanos",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "description": "Fanos is a lightweight JavaScript library for reliable data transmission via the Beacon API, with auto-retry, Fetch fallback, batching, and flexible triggers.",
   "main": "dist/fanos.esm.js",
