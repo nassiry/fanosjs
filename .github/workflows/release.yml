@@ -49,7 +49,7 @@ jobs:
 
       - name: Set up Git user
         run: |
-          git config --global user.name "${{ github.actor }}"
+          git config --global user.name "nassiry"
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
 
       - name: Run Semantic Release
