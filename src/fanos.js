@@ -134,7 +134,7 @@ export class Fanos {
 
     const maxDelay = this.config.maxRetryDelay || 300000
     const delay = Math.min(
-      this.config.retryInterval * 2 ** (attempt - 1),
+      this.config.retryInterval * 2 ** (attempt - 1) * (1 + Math.random() * 0.2),
       maxDelay,
     )
 
@@ -181,7 +181,8 @@ export class Fanos {
       }
     } catch (error) {
       debugLog(this.config.debug, 'Error loading queue:', error)
-      this.queue.clear()
+      this.queue.clear();
+      localStorage.removeItem(this.config.storeKey);
     }
   }
 

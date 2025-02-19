@@ -16,8 +16,7 @@
         "CONTRIBUTIONS.md",
         "README.md",
         "docs/**/*",
-        "example/**/*",
-        "dist/**/*"
+        "example/**/*"
       ],
       "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
     }],
