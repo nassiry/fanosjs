@@ -125,11 +125,9 @@ fanos.destroy()
 
 ## 3. Important Notes
 
-- **Beacon API Dependency**: Fanos relies on the [Beacon API](https://w3c.github.io/beacon/), which is supported in modern browsers. For older browsers, enable the `fallbackToFetch` option to use `Fetch` as a fallback.
-
-- **Node.js Compatibility**: Fanos is designed for browser environments and is **not compatible with Node.js**.
-
-- **Debugging**: Enable the `debug` option to log internal operations for troubleshooting.
+- **Beacon API Dependency**: Fanos relies on the [Beacon API](https://w3c.github.io/beacon/), to send data asynchronously to the server. Note that the Beacon API is specifically designed for sending data and **does not support receiving responses** from the server. For older browsers that do not support the Beacon API, you can enable the `fallbackToFetch` option to use `Fetch` as a fallback mechanism.
+- **Node.js Compatibility**: Fanos is specifically designed for browser environments and is **not compatible with Node.js**. Ensure it is used in client-side applications only.
+- **Debugging**: To assist with troubleshooting, you can enable the `debug` option. This will log internal operations and provide insights into the library's behavior during execution.
 
 ## 4. Next Steps
 
